@@ -11,7 +11,7 @@ app = Flask(__name__)
 def save_image_from_req():
     request_body = request.get_data()
     image_data = re.sub(r"^data.+base64\,", "", request_body)
-    fh = open("/home/shivi/Pictures/digit_image.png", "wb")
+    fh = open("/Users/santhirajesh/Documents/workspace_cmpe283/DR239Git/Images/digit_image.png", "wb")
     fh.write(image_data.decode('base64'))
     fh.close()
 
@@ -22,7 +22,7 @@ def recognize_image():
     # eg. confusion_matrix = recognize_image_for_digits("/tmp/digit_image.png")
     # confusion_matrix should be a dict like -
     # {1 : 0.99, 2 : 0.8, 3 : 0.6}
-    ImageConv("/home/shivi/Pictures/digit_image.png")
+    ImageConv("/Users/santhirajesh/Documents/workspace_cmpe283/DR239Git/Images/digit_image.png")
     return {1 : 0.99, 2 : 0.8, 3 : 0.6}
 
 

@@ -14,4 +14,3 @@ def ImageConv(filepath):
     #print (pix_val)
     return pix_val
    
-ImageConv("/home/shivi/Pictures/GumballInspector.png")
